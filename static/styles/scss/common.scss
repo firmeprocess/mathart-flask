@@ -1,7 +1,44 @@
 html,
-body, {
+body,
+#outermost-container {
     padding: 0;
     margin: 0;
     background-color: #f3f3f3;
 }
 
+#outermost-container {
+    min-height: 100%;
+    // run through http://www.pictaculous.com/ to get content-block  color
+    background: url("http://i.imgur.com/jIqriao.gif");
+}
+
+#outermost-container:after {
+    background: url("http://i.imgur.com/jIqriao.gif");
+    opacity: 0.5;
+}
+
+#navbar-main {
+    min-width: 100%;
+    background-color: #33454F;
+    border: none;
+    border-radius: 0;
+
+    #navbar-internal {
+        max-width: 830px;
+        a {
+            color: white;
+        }
+    }
+}
+
+#content_block {
+    min-width: 320px;
+    max-width: 800px;
+    min-height: 85%;
+    margin-bottom: 15%;
+    margin: 0 auto;
+
+    padding: 15px;
+    background-color: #33454F;
+    border-radius: 10px;
+}
