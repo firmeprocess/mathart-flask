@@ -1,4 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'index.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href='/static/styles/css/common.css' type='text/css'>
+{% endblock extra_css %}
 
 {% block content %}
 {{message}}
