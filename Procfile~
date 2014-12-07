@@ -1,0 +1,1 @@
+web: gunicorn mathart:app --log-file=-

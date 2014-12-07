@@ -1,0 +1,35 @@
+<html>
+{% block head %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block page_title %}base.html{% endblock %}</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' type='text/css'>
+    <!-- (almost) Only Styles-->
+    <link rel="stylesheet" href='/static/styles/css/common.css' type='text/css'>
+
+    {% block extra_css %}{% endblock extra_css %}
+
+</head>
+{% endblock %}
+
+{% block body %}
+<body>
+    <div class="container-fluid" id="outermost-container">
+        {% block navbar %}{% endblock %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Endscripts -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Load after jquery and bootstrap -->
+    {% block end_scripts %}{% endblock %}
+</body>
+{% endblock %}
+
+</html>
